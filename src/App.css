@@ -95,10 +95,43 @@ body {
     padding: 10px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .header-logo {
     height: 40px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input-icon {
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    color: #bbb;
+}
+
+.search-input {
+    width: 590px;
+    padding-left: 40px;
+    background-color: #f5f6f7;
+    border-radius: 5px;
+    height: 37px;
+    border: none;
+    outline: none;
+    font-family: "Maison Neue";
+    font-size: 16px;
+    color: #dedfe0;
+}
+
+.register-login {
+    display: flex;
+    gap: 20px;
 }
 
 .header button {

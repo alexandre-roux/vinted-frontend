@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
@@ -11,8 +12,21 @@ const Header = () => {
             alt="vinted"
           />
         </Link>
-        <button className="white-button">S'inscrire</button>
-        <button className="white-button">Se connecter</button>
+        <div className="search-container">
+          <FontAwesomeIcon
+            className="search-input-icon"
+            icon="magnifying-glass"
+          />
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Recherche des articles"
+          />
+        </div>
+        <div className="register-login">
+          <button className="white-button">S'inscrire</button>
+          <button className="white-button">Se connecter</button>
+        </div>
         <button className="green-button">Vends tes articles</button>
       </div>
     </div>

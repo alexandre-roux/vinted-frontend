@@ -14,7 +14,6 @@ const Offer = () => {
     );
     setOffer(response.data);
     setIsLoading(false);
-    console.log(offer);
   };
 
   useEffect(() => {
@@ -37,7 +36,7 @@ const Offer = () => {
               <ul className="offer-page-details-list">
                 {offer.product_details.map((detail, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <span>{Object.keys(detail)[0]}</span>
                       <span>{Object.values(detail)[0]}</span>
                     </li>
