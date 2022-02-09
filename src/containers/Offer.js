@@ -44,6 +44,7 @@ const Offer = () => {
                   );
                 })}
               </ul>
+              <div className="divider" />
               <p className="offer-page-name">{offer.product_name}</p>
               <p className="offer-page-description">
                 {offer.product_description}
