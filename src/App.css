@@ -1,1 +1,185 @@
-/* Other rules */
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-BookItalic.eot");
+    src: url("./assets/fonts/MaisonNeue-BookItalic.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-BookItalic.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-BookItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-LightItalic.eot");
+    src: url("./assets/fonts/MaisonNeue-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-LightItalic.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-Book.eot");
+    src: url("./assets/fonts/MaisonNeue-Book.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-Book.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-Book.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-MediumItalic.eot");
+    src: url("./assets/fonts/MaisonNeue-MediumItalic.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-MediumItalic.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-Medium.eot");
+    src: url("./assets/fonts/MaisonNeue-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-Medium.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-Bold.eot");
+    src: url("./assets/fonts/MaisonNeue-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-Bold.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-BoldItalic.eot");
+    src: url("./assets/fonts/MaisonNeue-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-BoldItalic.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Maison Neue";
+    src: url("./assets/fonts/MaisonNeue-Light.eot");
+    src: url("./assets/fonts/MaisonNeue-Light.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/MaisonNeue-Light.woff") format("woff"),
+    url("./assets/fonts/MaisonNeue-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+body {
+    font-family: "Maison Neue", sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 1280px;
+    height: 100px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 40px;
+}
+
+.header button {
+    height: 30px;
+    width: 115px;
+    border: 1px solid #2cb1ba;
+    border-radius: 5px;
+    font-size: 12px;
+    outline: none;
+}
+
+.white-button {
+    background-color: #fff;
+    color: #2cb1ba;
+}
+
+.green-button {
+    background-color: #2cb1ba;
+    color: #fff;
+}
+
+.hero-image {
+    height: 455px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: center;
+}
+
+.offers {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto auto;
+}
+
+.offer {
+    width: 235px;
+    padding: 0 6px 16px;
+    cursor: pointer;
+}
+
+.seller-details {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.seller-image {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.seller-name {
+    color: #999;
+    font-size: 12px;
+}
+
+.product-image {
+    height: 360px;
+    width: 235px;
+    object-fit: cover;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.price {
+    font-size: 14px;
+}
+
+.size-brand {
+    font-size: 12px;
+    color: #999;
+}
