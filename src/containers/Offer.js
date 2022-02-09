@@ -1,7 +1,5 @@
 const Offer = () => {
-    return (
-        <p>Hello World!</p>
-    );
+  return <p>Offer</p>;
 };
 
 export default Offer;
