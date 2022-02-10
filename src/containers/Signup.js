@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -36,12 +37,12 @@ const Signup = () => {
       password: password,
       newsletter: newsletter,
     };
-    console.log(data);
     const response = await axios.post(
       "https://lereacteur-vinted-api.herokuapp.com/user/signup",
       data
     );
-    console.log(response);
+    const token = response.data.token;
+    Cookies.set("token", token);
   };
 
   return (

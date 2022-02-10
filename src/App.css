@@ -360,9 +360,9 @@ width: 275px;
 
 .checkbox-container input {
     width: 25px;
-    /*height: 25px;*/
     margin-bottom: 0px;
     border-width: 10px;
+    cursor: pointer;
 }
 
 .checkbox-container span {
@@ -388,6 +388,7 @@ width: 275px;
     color: #fff;
     font-size: 16px;
     margin: 20px 0;
+    cursor: pointer;
 }
 
 .signup a {
