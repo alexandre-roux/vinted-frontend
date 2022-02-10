@@ -21,16 +21,20 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     const data = {
       email: email,
       password: password,
     };
+
     const response = await axios.post(
       "https://lereacteur-vinted-api.herokuapp.com/user/login",
       data
     );
+
     const token = response.data.token;
     Cookies.set("token", token, { sameSite: "none", secure: true });
+
     navigate("/");
   };
 

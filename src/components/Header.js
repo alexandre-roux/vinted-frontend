@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cookies from "js-cookie";
+import { useState } from "react";
 
 const Header = () => {
-  const token = Cookies.get("token");
+  const [token, setToken] = useState(Cookies.get("token"));
+
+  const handleLogoutClick = () => {
+    Cookies.remove("token");
+    setToken(undefined);
+  };
+
   return (
     <div className="header-container">
       <div className="header">
@@ -27,7 +34,9 @@ const Header = () => {
         </div>
         <div className="register-login">
           {token ? (
-            <button className="red-button">Se déconnecter</button>
+            <button className="red-button" onClick={handleLogoutClick}>
+              Se déconnecter
+            </button>
           ) : (
             <>
               <Link to="/signup" style={{ textDecoration: "none" }}>

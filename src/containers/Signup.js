@@ -33,18 +33,22 @@ const Signup = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     const data = {
       email: email,
       username: username,
       password: password,
       newsletter: newsletter,
     };
+
     const response = await axios.post(
       "https://lereacteur-vinted-api.herokuapp.com/user/signup",
       data
     );
+
     const token = response.data.token;
     Cookies.set("token", token, { sameSite: "none", secure: true });
+
     navigate("/");
   };
 

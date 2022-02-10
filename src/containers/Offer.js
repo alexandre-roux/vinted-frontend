@@ -16,6 +16,7 @@ const Offer = () => {
       setOffer(response.data);
       setIsLoading(false);
     };
+
     fetchData();
   }, [id]);
 

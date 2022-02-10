@@ -15,6 +15,7 @@ const Home = () => {
       setData(response.data);
       setIsLoading(false);
     };
+
     fetchData();
   }, []);
 
