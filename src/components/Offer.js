@@ -11,7 +11,7 @@ const Offer = ({ offer }) => {
         />
         <span className="seller-name">{offer.owner.account.username}</span>
       </div>
-      <Link to={"/offer/" + offer._id}>
+      <Link to={"/offer/" + offer._id} style={{ textDecoration: "none" }}>
         <img
           className="product-image"
           src={offer.product_image.url}
