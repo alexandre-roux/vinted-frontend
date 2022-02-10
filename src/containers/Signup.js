@@ -1,9 +1,11 @@
 import Header from "../components/Header";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,6 +45,7 @@ const Signup = () => {
     );
     const token = response.data.token;
     Cookies.set("token", token, { sameSite: "none", secure: true });
+    navigate("/");
   };
 
   return (
