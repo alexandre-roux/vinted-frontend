@@ -66,7 +66,7 @@ const Signup = () => {
             />
             <input
               placeholder="Mot de passe"
-              type="text"
+              type="password"
               value={password}
               onChange={handlePasswordChange}
             />
