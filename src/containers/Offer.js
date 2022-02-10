@@ -8,17 +8,16 @@ const Offer = () => {
   const [offer, setOffer] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = async () => {
-    const response = await axios.get(
-      "https://lereacteur-vinted-api.herokuapp.com/offer/" + id
-    );
-    setOffer(response.data);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        "https://lereacteur-vinted-api.herokuapp.com/offer/" + id
+      );
+      setOffer(response.data);
+      setIsLoading(false);
+    };
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
     !isLoading && (
