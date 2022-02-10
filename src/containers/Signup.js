@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import { useState } from "react";
+import axios from "axios";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -23,11 +24,25 @@ const Signup = () => {
   };
 
   const handleNewsletterChange = (event) => {
-    const value = event.target.value;
+    const value = event.target.checked;
     setNewsletter(value);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = {
+      email: email,
+      username: username,
+      password: password,
+      newsletter: newsletter,
+    };
+    console.log(data);
+    const response = await axios.post(
+      "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+      data
+    );
+    console.log(response);
+  };
 
   return (
     <>
@@ -56,7 +71,11 @@ const Signup = () => {
             />
             <div className="checkbox-container">
               <div>
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value={newsletter}
+                  onChange={handleNewsletterChange}
+                />
                 <span>S'inscrire à notre newsletter</span>
               </div>
               <p>
@@ -65,13 +84,7 @@ const Signup = () => {
                 confirme avoir au moins 18 ans.
               </p>
             </div>
-            <button
-              type="submit"
-              value={newsletter}
-              onClick={handleNewsletterChange}
-            >
-              S'inscrire
-            </button>
+            <button type="submit">S'inscrire</button>
           </form>
           <a href="/login">Tu as déjà un compte ? Connecte-toi !</a>
         </div>
