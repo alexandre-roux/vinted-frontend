@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Cookies from "js-cookie";
 
 const Header = () => {
+  const token = Cookies.get("token");
   return (
     <div className="header-container">
       <div className="header">
@@ -24,12 +26,18 @@ const Header = () => {
           />
         </div>
         <div className="register-login">
-          <Link to="/signup" style={{ textDecoration: "none" }}>
-            <button className="white-button">S'inscrire</button>
-          </Link>
-          <Link to="/login" style={{ textDecoration: "none" }}>
-            <button className="white-button">Se connecter</button>
-          </Link>
+          {token ? (
+            <button className="red-button">Se déconnecter</button>
+          ) : (
+            <>
+              <Link to="/signup" style={{ textDecoration: "none" }}>
+                <button className="white-button">S'inscrire</button>
+              </Link>
+              <Link to="/login" style={{ textDecoration: "none" }}>
+                <button className="white-button">Se connecter</button>
+              </Link>
+            </>
+          )}
         </div>
         <button className="green-button">Vends tes articles</button>
       </div>

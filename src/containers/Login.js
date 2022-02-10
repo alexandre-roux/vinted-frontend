@@ -50,7 +50,7 @@ const Login = () => {
               value={password}
               onChange={handlePasswordChange}
             />
-            <button type="submit">S'inscrire</button>
+            <button type="submit">Se connecter</button>
           </form>
           <a href="/signup">Pas encore de compte ? Inscris-toi !</a>
         </div>

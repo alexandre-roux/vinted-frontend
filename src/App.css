@@ -132,13 +132,15 @@ body {
 
 .register-login {
     display: flex;
-    gap: 20px;
+    width:250px;
+    gap:20px;
+    justify-content: center;
 }
 
 .header button {
     height: 30px;
     width: 115px;
-    border: 1px solid #2cb1ba;
+
     border-radius: 5px;
     font-size: 12px;
     outline: none;
@@ -148,11 +150,19 @@ body {
 .white-button {
     background-color: #fff;
     color: #2cb1ba;
+    border: 1px solid #2cb1ba;
 }
 
 .green-button {
     background-color: #2cb1ba;
     color: #fff;
+    border: none;
+}
+
+.red-button {
+    background-color: #c2175b;
+    color:#fff;
+    border: none;
 }
 
 .hero-image {
