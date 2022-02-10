@@ -97,6 +97,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: auto;
+    gap:30px
 }
 
 .header-logo {
