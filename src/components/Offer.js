@@ -7,7 +7,7 @@ const Offer = ({ offer }) => {
         <img
           className="seller-image"
           src={offer.owner.account.avatar.url}
-          alt="seller image"
+          alt="seller"
         />
         <span className="seller-name">{offer.owner.account.username}</span>
       </div>
@@ -15,7 +15,7 @@ const Offer = ({ offer }) => {
         <img
           className="product-image"
           src={offer.product_image.url}
-          alt="product image"
+          alt="product"
         />
         <div className="product-details">
           <span className="price">{offer.product_price} €</span>

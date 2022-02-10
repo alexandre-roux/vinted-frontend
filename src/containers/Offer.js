@@ -29,7 +29,7 @@ const Offer = () => {
             <img
               className="offer-page-image"
               src={offer.product_image.url}
-              alt="product image"
+              alt="product"
             />
             <div className="offer-page-details">
               <span className="offer-page-price">{offer.product_price} €</span>
@@ -52,7 +52,7 @@ const Offer = () => {
                 <img
                   className="offer-page-seller-image"
                   src={offer.owner.account.avatar.url}
-                  alt="seller image"
+                  alt="seller"
                 />
                 <span className="offer-page-seller-name">
                   {offer.owner.account.username}

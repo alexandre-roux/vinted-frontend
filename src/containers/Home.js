@@ -26,7 +26,7 @@ const Home = () => {
         <img
           className="hero-image"
           src="https://lereacteur-vinted.netlify.app/static/media/hero.09bfd0f9.jpg"
-          alt="hero image"
+          alt="hero"
         />
         <div className="offers-container">
           <div className="offers">
