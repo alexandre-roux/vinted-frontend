@@ -42,14 +42,14 @@ const Signup = () => {
       data
     );
     const token = response.data.token;
-    Cookies.set("token", token);
+    Cookies.set("token", token, { sameSite: "none", secure: true });
   };
 
   return (
     <>
       <Header />
-      <div className="signup-container">
-        <div className="signup">
+      <div className="signup-login-container">
+        <div className="signup-login">
           <h2>S'inscrire</h2>
           <form onSubmit={handleSubmit}>
             <input

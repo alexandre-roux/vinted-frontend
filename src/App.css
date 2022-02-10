@@ -313,7 +313,7 @@ body {
     margin-top: 32px;
 }
 
-.signup-container {
+.signup-login-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -327,12 +327,12 @@ h2 {
 
 }
 
-.signup {
+.signup-login {
 width: 275px;
     margin: auto;
 }
 
-.signup input {
+.signup-login input {
     border: none;
     border-bottom: 1px solid #fcced3;
     outline: none;
@@ -342,7 +342,7 @@ width: 275px;
     font-size: 18px
 }
 
-.signup input::placeholder {
+.signup-login input::placeholder {
     color: #e3e4e4;
 }
 
@@ -378,7 +378,7 @@ width: 275px;
     line-height: 15px;
 }
 
-.signup button {
+.signup-login button {
     background-color: #2cb1ba;
     height: 45px;
     width: 100%;
@@ -391,7 +391,7 @@ width: 275px;
     cursor: pointer;
 }
 
-.signup a {
+.signup-login a {
     color: #2cb1ba;
     font-size: 12px;
     text-decoration: none;
