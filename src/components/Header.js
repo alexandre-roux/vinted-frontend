@@ -24,7 +24,9 @@ const Header = () => {
           />
         </div>
         <div className="register-login">
-          <button className="white-button">S'inscrire</button>
+          <Link to="/signup" style={{ textDecoration: "none" }}>
+            <button className="white-button">S'inscrire</button>
+          </Link>
           <button className="white-button">Se connecter</button>
         </div>
         <button className="green-button">Vends tes articles</button>

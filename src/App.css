@@ -142,6 +142,7 @@ body {
     border-radius: 5px;
     font-size: 12px;
     outline: none;
+    cursor: pointer;
 }
 
 .white-button {
@@ -310,4 +311,88 @@ body {
     padding: 0 16px;
     line-height: 36px;
     margin-top: 32px;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0;
+
+}
+
+.signup {
+width: 275px;
+    margin: auto;
+}
+
+.signup input {
+    border: none;
+    border-bottom: 1px solid #fcced3;
+    outline: none;
+    height: 35px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px
+}
+
+.signup input::placeholder {
+    color: #e3e4e4;
+}
+
+.checkbox-container {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.checkbox-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.checkbox-container input {
+    width: 25px;
+    /*height: 25px;*/
+    margin-bottom: 0px;
+    border-width: 10px;
+}
+
+.checkbox-container span {
+    color: #666;
+    margin-top: 3px;
+}
+
+.checkbox-container p {
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+    margin: 12px 0;
+    line-height: 15px;
+}
+
+.signup button {
+    background-color: #2cb1ba;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.signup a {
+    color: #2cb1ba;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 20px;
 }
