@@ -32,25 +32,29 @@ const Signup = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    try {
+      event.preventDefault();
 
-    const data = {
-      email: email,
-      username: username,
-      password: password,
-      newsletter: newsletter,
-    };
+      const data = {
+        email: email,
+        username: username,
+        password: password,
+        newsletter: newsletter,
+      };
 
-    const response = await axios.post(
-      // "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-      "https://vinted-test.herokuapp.com/user/signup",
-      data
-    );
+      const response = await axios.post(
+        // "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        "https://vinted-test.herokuapp.com/user/signup",
+        data
+      );
 
-    const token = response.data.token;
-    Cookies.set("token", token, { sameSite: "none", secure: true });
+      const token = response.data.token;
+      Cookies.set("token", token, { sameSite: "none", secure: true });
 
-    navigate("/");
+      navigate("/");
+    } catch (error) {
+      alert(error.response.data.error.message);
+    }
   };
 
   return (
