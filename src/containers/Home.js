@@ -22,7 +22,7 @@ const Home = () => {
   return (
     !isLoading && (
       <>
-        <Header />
+        <Header displayAdvancedSearch={true} />
         <div className="hero-image">
           <img
             src="https://lereacteur-vinted.netlify.app/static/media/tear.42d6cec6.svg"
