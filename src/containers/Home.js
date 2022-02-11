@@ -23,11 +23,13 @@ const Home = () => {
     !isLoading && (
       <>
         <Header />
-        <img
-          className="hero-image"
-          src="https://lereacteur-vinted.netlify.app/static/media/hero.09bfd0f9.jpg"
-          alt="hero"
-        />
+        <div className="hero-image">
+          <img
+            src="https://lereacteur-vinted.netlify.app/static/media/tear.42d6cec6.svg"
+            alt="hero tear"
+            className="hero-tear"
+          />
+        </div>
         <div className="offers-container">
           <div className="offers">
             {data.offers.map((offer, index) => {
