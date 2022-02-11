@@ -20,23 +20,27 @@ const Login = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    try {
+      event.preventDefault();
 
-    const data = {
-      email: email,
-      password: password,
-    };
+      const data = {
+        email: email,
+        password: password,
+      };
 
-    const response = await axios.post(
-      // "https://lereacteur-vinted-api.herokuapp.com/user/login",
-      "https://vinted-test.herokuapp.com/user/login",
-      data
-    );
+      const response = await axios.post(
+        // "https://lereacteur-vinted-api.herokuapp.com/user/login",
+        "https://vinted-test.herokuapp.com/user/login",
+        data
+      );
 
-    const token = response.data.token;
-    Cookies.set("token", token, { sameSite: "none", secure: true });
+      const token = response.data.token;
+      Cookies.set("token", token, { sameSite: "none", secure: true });
 
-    navigate("/");
+      navigate("/");
+    } catch (error) {
+      alert(error.response.data.error.message);
+    }
   };
 
   return (
