@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
@@ -48,7 +49,9 @@ const Home = () => {
           />
           <div className="hero-text">
             Prêts à faire du tri dans vos placards ?
-            <button>Commencer à vendre</button>
+            <Link to="/login">
+              <button>Commencer à vendre</button>
+            </Link>
           </div>
         </div>
         <div className="offers-container">
