@@ -84,11 +84,6 @@ body {
     font-family: "Maison Neue", sans-serif;
 }
 
-.header-container {
-    display: flex;
-    justify-content: center;
-}
-
 .header {
     width: 1280px;
     height: 45px;
