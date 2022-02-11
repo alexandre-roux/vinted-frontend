@@ -6,23 +6,40 @@ import Offer from "../components/Offer";
 const Home = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [sortingOrder, setSortingOrder] = useState("price-asc");
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(500);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers"
+        "https://lereacteur-vinted-api.herokuapp.com/offers",
+        {
+          params: {
+            sort: sortingOrder,
+            priceMin: Number(minPrice),
+            priceMax: Number(maxPrice),
+          },
+        }
       );
       setData(response.data);
       setIsLoading(false);
     };
 
     fetchData();
-  }, []);
+  }, [sortingOrder, minPrice, maxPrice]);
 
   return (
     !isLoading && (
       <>
-        <Header displayAdvancedSearch={true} />
+        <Header
+          sortingOrder={sortingOrder}
+          setSortingOrder={setSortingOrder}
+          minPrice={minPrice}
+          setMinPrice={setMinPrice}
+          maxPrice={maxPrice}
+          setMaxPrce={setMaxPrice}
+        />
         <div className="hero-image">
           <img
             src="https://lereacteur-vinted.netlify.app/static/media/tear.42d6cec6.svg"

@@ -5,23 +5,20 @@ import { useState } from "react";
 
 const Header = (props) => {
   const [token, setToken] = useState(Cookies.get("token"));
-  const [sortingOrder, setSortingOrder] = useState("asc");
-  const [minPrice, setMinPrice] = useState(undefined);
-  const [maxPrice, setMaxPrice] = useState(undefined);
 
   const handleSortingOrder = (event) => {
     const value = event.target.value;
-    setSortingOrder(value);
+    props.setSortingOrder(value);
   };
 
   const handleMinPrice = (event) => {
     const value = event.target.value;
-    setMinPrice(value);
+    props.setMinPrice(value);
   };
 
   const handleMaxPrice = (event) => {
     const value = event.target.value;
-    setMaxPrice(value);
+    props.setMaxPrice(value);
   };
 
   const handleLogoutClick = () => {
@@ -48,17 +45,25 @@ const Header = (props) => {
           type="text"
           placeholder="Recherche des articles"
         />
-        {props.displayAdvancedSearch && (
+        {props.sortingOrder && (
           <div className="advanced-search">
             <span>Trier les prix : </span>
-            <select value={sortingOrder} onChange={handleSortingOrder}>
-              <option value="asc">Ascendant</option>
-              <option value="desc">Descendant</option>
+            <select value={props.sortingOrder} onChange={handleSortingOrder}>
+              <option value="price-asc">Ascendant</option>
+              <option value="price-desc">Descendant</option>
             </select>
             <span> Prix: entre </span>
-            <input type="number" value={minPrice} onChange={handleMinPrice} />
+            <input
+              type="number"
+              value={props.minPrice}
+              onChange={handleMinPrice}
+            />
             <span> et </span>
-            <input type="number" value={maxPrice} onChange={handleMaxPrice} />
+            <input
+              type="number"
+              value={props.maxPrice}
+              onChange={handleMaxPrice}
+            />
           </div>
         )}
       </div>
