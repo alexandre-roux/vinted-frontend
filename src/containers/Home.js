@@ -46,6 +46,10 @@ const Home = () => {
             alt="hero tear"
             className="hero-tear"
           />
+          <div className="hero-text">
+            Prêts à faire du tri dans vos placards ?
+            <button>Commencer à vendre</button>
+          </div>
         </div>
         <div className="offers-container">
           <div className="offers">
