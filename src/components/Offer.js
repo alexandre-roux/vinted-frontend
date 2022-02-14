@@ -6,7 +6,7 @@ const Offer = ({ offer }) => {
       <div className="seller-details">
         <img
           className="seller-image"
-          src={offer.owner.account.avatar.url}
+          src={offer.owner.account.avatar?.url}
           alt="seller"
         />
         <span className="seller-name">{offer.owner.account.username}</span>

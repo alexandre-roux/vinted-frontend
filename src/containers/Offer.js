@@ -51,7 +51,7 @@ const Offer = () => {
               <div className="offer-page-seller-details">
                 <img
                   className="offer-page-seller-image"
-                  src={offer.owner.account.avatar.url}
+                  src={offer.owner.account.avatar?.url}
                   alt="seller"
                 />
                 <span className="offer-page-seller-name">
