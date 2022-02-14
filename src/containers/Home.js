@@ -10,6 +10,7 @@ const Home = () => {
   const [sortingOrder, setSortingOrder] = useState("price-asc");
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(500);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +21,7 @@ const Home = () => {
             sort: sortingOrder,
             priceMin: Number(minPrice),
             priceMax: Number(maxPrice),
+            title: searchTerm,
           },
         }
       );
@@ -28,7 +30,7 @@ const Home = () => {
     };
 
     fetchData();
-  }, [sortingOrder, minPrice, maxPrice]);
+  }, [sortingOrder, minPrice, maxPrice, searchTerm]);
 
   return (
     !isLoading && (
@@ -39,7 +41,9 @@ const Home = () => {
           minPrice={minPrice}
           setMinPrice={setMinPrice}
           maxPrice={maxPrice}
-          setMaxPrce={setMaxPrice}
+          setMaxPrice={setMaxPrice}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
         />
         <div className="hero-image">
           <img

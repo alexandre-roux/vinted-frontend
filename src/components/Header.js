@@ -26,6 +26,11 @@ const Header = (props) => {
     setToken(undefined);
   };
 
+  const handleSearchTermChange = (event) => {
+    const value = event.target.value;
+    props.setSearchTerm(value);
+  };
+
   return (
     <div className="header">
       <Link to="/">
@@ -44,6 +49,8 @@ const Header = (props) => {
           className="search-input"
           type="text"
           placeholder="Recherche des articles"
+          value={props.searchTerm}
+          onChange={handleSearchTermChange}
         />
         {props.sortingOrder && (
           <div className="advanced-search">
