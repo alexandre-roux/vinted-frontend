@@ -509,3 +509,18 @@ width: 275px;
     border-width: 10px;
     cursor: pointer;
 }
+
+.button-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.publish button {
+    font-size: 16px;
+    padding: 12px;
+    background-color: #0ab1ba;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 50px 0;
+}
