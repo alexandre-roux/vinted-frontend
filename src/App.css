@@ -442,3 +442,70 @@ width: 275px;
     text-decoration: none;
     margin-top: 20px;
 }
+
+.publish{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.publish h2 {
+    font-size: 24px;
+    padding-top: 40px;
+    margin: 0 0;
+}
+
+.text-input-section {
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 0 2px grey;
+}
+
+.text-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.text-input-section .text-input:not(:last-child) {
+    border-bottom: 1px solid #ebedee;
+    vertical-align: center;
+}
+
+.text-input input {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #ebedee;
+    outline: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.text-input textarea {
+    width: 50%;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #ebedee;
+    outline: none;
+    color: #000;
+    font-size: 16px;
+    font-family: "Maison Neue", sans-serif;
+}
+
+.checkbox-section {
+    width: 50%;
+}
+
+.checkbox-section div {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.text-input .exchange-checkbox {
+    width: 25px;
+    height: 25px;
+    border-width: 10px;
+    cursor: pointer;
+}

@@ -53,7 +53,7 @@ const Home = () => {
           />
           <div className="hero-text">
             Prêts à faire du tri dans vos placards ?
-            <Link to="/login">
+            <Link to="/publish">
               <button>Commencer à vendre</button>
             </Link>
           </div>
