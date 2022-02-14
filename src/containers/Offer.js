@@ -24,7 +24,7 @@ const Offer = () => {
     !isLoading && (
       <>
         <Header />
-        <div className="offer-page-container">
+        <div className="grey-container">
           <div className="offer-page">
             <img
               className="offer-page-image"

@@ -23,7 +23,7 @@ const Header = (props) => {
 
   const handleLogoutClick = () => {
     Cookies.remove("token");
-    props.setToken(null);
+    setToken(null);
   };
 
   const handleSearchTermChange = (event) => {
