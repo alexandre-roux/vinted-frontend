@@ -23,7 +23,7 @@ const Header = (props) => {
 
   const handleLogoutClick = () => {
     Cookies.remove("token");
-    setToken(undefined);
+    props.setToken(null);
   };
 
   const handleSearchTermChange = (event) => {
@@ -90,7 +90,9 @@ const Header = (props) => {
           </>
         )}
       </div>
-      <button className="green-button">Vends tes articles</button>
+      <Link to="/publish">
+        <button className="green-button">Vends tes articles</button>
+      </Link>
     </div>
   );
 };
