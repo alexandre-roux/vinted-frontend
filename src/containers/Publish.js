@@ -91,8 +91,8 @@ function Publish() {
       formData.append("picture", file);
 
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
-        // "https://vinted-test.herokuapp.com/user/login",
+        // "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+        "https://vinted-test.herokuapp.com/offer/publish",
         formData,
         {
           headers: {

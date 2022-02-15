@@ -11,7 +11,8 @@ const Offer = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offer/" + id
+        "https://vinted-test.herokuapp.com/offer/" + id
+        // "https://lereacteur-vinted-api.herokuapp.com/offer/" + id
       );
       setOffer(response.data);
       setIsLoading(false);

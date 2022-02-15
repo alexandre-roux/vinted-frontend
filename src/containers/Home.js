@@ -15,7 +15,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers",
+        // "https://lereacteur-vinted-api.herokuapp.com/offers",
+        "https://vinted-test.herokuapp.com/offers",
         {
           params: {
             sort: sortingOrder,
@@ -62,7 +63,8 @@ const Home = () => {
         </div>
         <div className="offers-container">
           <div className="offers">
-            {data.offers.map((offer, index) => {
+            {data.map((offer, index) => {
+              // {data.offers.map((offer, index) => {
               return <Offer key={index} offer={offer} />;
             })}
           </div>
