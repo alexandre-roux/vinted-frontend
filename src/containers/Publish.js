@@ -29,50 +29,39 @@ function Publish() {
     onDrop,
   });
 
-  //TODO make one unique 'onChange' function to handle all of this
-  const handleTitleChange = (event) => {
-    const value = event.target.value;
-    setTitle(value);
-  };
-
-  const handleDescriptionChange = (event) => {
-    const value = event.target.value;
-    setDescription(value);
-  };
-
-  const handleBrandChange = (event) => {
-    const value = event.target.value;
-    setBrand(value);
-  };
-
-  const handleSizeChange = (event) => {
-    const value = event.target.value;
-    setSize(value);
-  };
-
-  const handleColorChange = (event) => {
-    const value = event.target.value;
-    setColor(value);
-  };
-
-  const handleConditionChange = (event) => {
-    const value = event.target.value;
-    setCondition(value);
-  };
-
-  const handleCityChange = (event) => {
-    const value = event.target.value;
-    setCity(value);
-  };
-
-  const handlePriceChange = (event) => {
-    const value = event.target.value;
-    setPrice(value);
-  };
-
-  const handleExchangeChange = (event) => {
-    const value = event.target.checked;
-    setExchange(value);
+  const handleChange = (event) => {
+    switch (event.target.id) {
+      case "title":
+        setTitle(event.target.value);
+        break;
+      case "description":
+        setDescription(event.target.value);
+        break;
+      case "brand":
+        setBrand(event.target.value);
+        break;
+      case "size":
+        setSize(event.target.value);
+        break;
+      case "color":
+        setColor(event.target.value);
+        break;
+      case "condition":
+        setCondition(event.target.value);
+        break;
+      case "city":
+        setCity(event.target.value);
+        break;
+      case "price":
+        setPrice(event.target.value);
+        break;
+      case "exchange":
+        setExchange(event.target.value);
+        break;
+      default:
+        console.log("Error: " + event.target.id + " isn't a valid id");
+        break;
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -126,19 +115,21 @@ function Publish() {
               <div className="text-input">
                 <h4>Titre</h4>
                 <input
+                  id="title"
                   type="text"
                   placeholder="ex: Chemise Sézane vert"
                   value={title}
-                  onChange={handleTitleChange}
+                  onChange={handleChange}
                 />
               </div>
               <div className="text-input">
                 <h4>Décris ton article</h4>
                 <textarea
+                  id="description"
                   rows="5"
                   placeholder="ex: porté quelquefois, taille correctement"
                   value={description}
-                  onChange={handleDescriptionChange}
+                  onChange={handleChange}
                 ></textarea>
               </div>
             </div>
@@ -146,46 +137,51 @@ function Publish() {
               <div className="text-input">
                 <h4>Marque</h4>
                 <input
+                  id="brand"
                   type="text"
                   placeholder="ex: Zara"
                   value={brand}
-                  onChange={handleBrandChange}
+                  onChange={handleChange}
                 />
               </div>
               <div className="text-input">
                 <h4>Taille</h4>
                 <input
+                  id="size"
                   type="text"
                   placeholder="ex: L / 40 / 12"
                   value={size}
-                  onChange={handleSizeChange}
+                  onChange={handleChange}
                 />
               </div>
               <div className="text-input">
                 <h4>Couleur</h4>
                 <input
+                  id="color"
                   type="text"
                   placeholder="ex: Fushia"
                   value={color}
-                  onChange={handleColorChange}
+                  onChange={handleChange}
                 />
               </div>
               <div className="text-input">
                 <h4>Etat</h4>
                 <input
+                  id="condition"
                   type="text"
                   placeholder="ex: Neuf avec étiquette"
                   value={condition}
-                  onChange={handleConditionChange}
+                  onChange={handleChange}
                 />
               </div>
               <div className="text-input">
                 <h4>Lieu</h4>
                 <input
+                  id="city"
                   type="text"
                   placeholder="ex: Paris"
                   value={city}
-                  onChange={handleCityChange}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -194,17 +190,19 @@ function Publish() {
                 <h4>Prix</h4>
                 <div className="checkbox-section">
                   <input
+                    id="price"
                     type="number"
                     placeholder="0,00 €"
                     value={price}
-                    onChange={handlePriceChange}
+                    onChange={handleChange}
                   />
                   <div>
                     <input
+                      id="exchange"
                       className="exchange-checkbox"
                       type="checkbox"
                       value={exchange}
-                      onChange={handleExchangeChange}
+                      onChange={handleChange}
                     />
                     <span> Je suis intéressé(e) par les échanges</span>
                   </div>
