@@ -485,6 +485,7 @@ width: 275px;
     outline: none;
     color: #000;
     font-size: 16px;
+    font-family: "Maison Neue", sans-serif;
 }
 
 .text-input textarea {

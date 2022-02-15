@@ -19,16 +19,17 @@ function Publish() {
   const [exchange, setExchange] = useState(false);
   const [file, setFile] = useState();
 
+  //TODO display image in container
   const onDrop = useCallback((acceptedFiles) => {
     setFile(acceptedFiles[0]);
   }, []);
 
-  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
-    useDropzone({
-      accept: "image/jpeg,image/png",
-      onDrop,
-    });
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: "image/jpeg,image/png",
+    onDrop,
+  });
 
+  //TODO make one unique 'onChange' function to handle all of this
   const handleTitleChange = (event) => {
     const value = event.target.value;
     setTitle(value);
@@ -100,9 +101,8 @@ function Publish() {
         }
       );
 
-      console.log(response);
-
-      navigate("/");
+      //TODO redirect to offer's page
+      navigate("/offer/" + response.data._id);
     } catch (error) {
       alert(error.response.data.error.message);
     }
