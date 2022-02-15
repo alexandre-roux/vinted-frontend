@@ -43,8 +43,8 @@ const Signup = () => {
       };
 
       const response = await axios.post(
-        // "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-        "https://vinted-test.herokuapp.com/user/signup",
+        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        // "https://vinted-test.herokuapp.com/user/signup",
         data
       );
 

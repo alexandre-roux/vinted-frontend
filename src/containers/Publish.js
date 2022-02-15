@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Cookies from "js-cookie";
 import { useNavigate, Navigate } from "react-router-dom";
 import Header from "../components/Header";
 import axios from "axios";
+import { useDropzone } from "react-dropzone";
 
 function Publish() {
   const token = Cookies.get("token");
@@ -16,6 +17,17 @@ function Publish() {
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
   const [exchange, setExchange] = useState(false);
+  const [file, setFile] = useState();
+
+  const onDrop = useCallback((acceptedFiles) => {
+    setFile(acceptedFiles[0]);
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
+    useDropzone({
+      accept: "image/jpeg,image/png",
+      onDrop,
+    });
 
   const handleTitleChange = (event) => {
     const value = event.target.value;
@@ -66,21 +78,21 @@ function Publish() {
     try {
       event.preventDefault();
 
-      const data = {
-        title: title,
-        description: description,
-        brand: brand,
-        size: size,
-        color: color,
-        condition: condition,
-        city: city,
-        price: price,
-      };
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("brand", brand);
+      formData.append("size", size);
+      formData.append("color", color);
+      formData.append("condition", condition);
+      formData.append("city", city);
+      formData.append("price", price);
+      formData.append("picture", file);
 
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
         // "https://vinted-test.herokuapp.com/user/login",
-        data,
+        formData,
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -102,6 +114,14 @@ function Publish() {
       <div className="grey-container">
         <div className="publish">
           <h2>Vends ton article</h2>
+          <div className="file-select">
+            <div className="dashed-container">
+              <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                <button>+ Ajoute une photo</button>
+              </div>
+            </div>
+          </div>
           <form onSubmit={handleSubmit}>
             <div className="text-input-section">
               <div className="text-input">
