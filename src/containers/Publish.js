@@ -101,7 +101,6 @@ function Publish() {
         }
       );
 
-      //TODO redirect to offer's page
       navigate("/offer/" + response.data._id);
     } catch (error) {
       alert(error.response.data.error.message);
