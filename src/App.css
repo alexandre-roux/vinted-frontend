@@ -178,6 +178,11 @@ body {
     pointer-events: none;
 }
 
+.hero-text-container {
+    width: 1280px;
+    margin: auto;
+}
+
 .hero-text {
     height: 220px;
     width: 360px;
@@ -510,7 +515,7 @@ width: 275px;
     cursor: pointer;
 }
 
-.button-div {
+.button-container {
     display: flex;
     justify-content: flex-end;
 }

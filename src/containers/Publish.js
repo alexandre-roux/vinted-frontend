@@ -212,7 +212,7 @@ function Publish() {
                 </div>
               </div>
             </div>
-            <div className="button-div">
+            <div className="button-container">
               <button type="submit">Ajouter</button>
             </div>
           </form>

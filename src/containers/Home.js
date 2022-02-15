@@ -51,11 +51,13 @@ const Home = () => {
             alt="hero tear"
             className="hero-tear"
           />
-          <div className="hero-text">
-            Prêts à faire du tri dans vos placards ?
-            <Link to="/publish">
-              <button>Commencer à vendre</button>
-            </Link>
+          <div className="hero-text-container">
+            <div className="hero-text">
+              Prêts à faire du tri dans vos placards ?
+              <Link to="/publish">
+                <button>Commencer à vendre</button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="offers-container">
