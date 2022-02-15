@@ -7,6 +7,7 @@ import Publish from "./containers/Publish";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Payment from "./containers/Payment";
 library.add(faMagnifyingGlass);
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/publish" element={<Publish />} />
+          <Route path="/payment" element={<Payment/>}/>
       </Routes>
     </Router>
   );
