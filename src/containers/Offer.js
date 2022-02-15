@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 
@@ -58,7 +58,9 @@ const Offer = () => {
                   {offer.owner.account.username}
                 </span>
               </div>
-              <button className="offer-page-button">Acheter</button>
+              <Link to="/payment" state={{ offer: offer }}>
+                <button className="offer-page-button">Acheter</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -78,8 +78,6 @@
     font-style: normal;
 }
 
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
 body {
     font-family: "Maison Neue", sans-serif;
 }
@@ -120,6 +118,7 @@ body {
     border: none;
     outline: none;
     font-size: 16px;
+    font-family: "Maison Neue", sans-serif;
 }
 
 .advanced-search {
@@ -410,7 +409,7 @@ width: 275px;
 
 .checkbox-container input {
     width: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-width: 10px;
     cursor: pointer;
 }
@@ -553,4 +552,64 @@ width: 275px;
     font-weight: 700;
     background-color: white;
     border: 1px solid #0ab1ba;
+}
+
+.payment {
+    width: 600px;
+    margin: 36px auto;
+    padding:  20px;
+    background-color: white;
+}
+
+.payment .title {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 24px ;
+}
+
+.payment ul {
+    list-style-type: none;
+
+}
+
+.payment li {
+    font-size: 16px;
+    line-height: 22px;
+    color: #666;
+    padding: 4px 0;
+    display: grid;
+    grid: auto/1fr auto;
+    align-items: center;
+}
+
+.payment li.bold {
+    font-weight: 700;
+    color: black;
+    margin-bottom: 24px;
+}
+
+.payment .divider {
+    margin: 24px 0
+}
+
+.payment .content .bold {
+    font-weight: 700;
+}
+
+.pay-button {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    height: 44px;
+    padding: 0 14px;
+    color: #fff;
+    border: 1px solid #00c06d;
+    border-radius: 4px;
+    background: #00c06d;
+    outline: none;
 }

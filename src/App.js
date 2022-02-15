@@ -12,16 +12,18 @@ library.add(faMagnifyingGlass);
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/offer/:id" element={<Offer />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/publish" element={<Publish />} />
-          <Route path="/payment" element={<Payment/>}/>
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/offer/:id" element={<Offer />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/publish" element={<Publish />} />
+          <Route path="/payment" element={<Payment />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
